@@ -1,0 +1,36 @@
+Instalar Node;
+
+Criar projeto: 
+  Rodar npm init -y
+
+instalar dependências
+  npm install mysql //banco
+
+  npm install sequelize //orm - mapear tabelas e objetos
+
+  npm install express // criar servidor rotas
+
+
+Intalar de forma global o nodemon
+  npm install -g nodemon
+
+Alterar package.json na tag scripts
+  "start": "npx nodemon src/app.js"
+
+Criar app.js
+  const express = require('express');
+
+  const app = express();
+
+  app.use(express.json());
+
+  app.get('/teste', (req, res) => {
+    res.send('HeloOoOO');
+  });
+
+  app.listen(3001, async () => {
+    console.log('servidor rodando');
+  });
+
+Criar db.js
+  Configurar banco de dados
